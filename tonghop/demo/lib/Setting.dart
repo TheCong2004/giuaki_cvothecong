@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'profile.dart';
+import 'Login.dart';
 
 class Setting extends StatefulWidget {
   const Setting({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class _SettingsScreenState extends State<Setting> {
                 children: [
                   const CircleAvatar(
                     radius: 25,
-                    backgroundImage: AssetImage('assets/tuantran.png'),
+                    backgroundImage: AssetImage('assets/6.png'),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -147,7 +148,12 @@ class _SettingsScreenState extends State<Setting> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Longin()), // Điều hướng sang trang signup.dart
+                  );
+                },
                 child: const Text(
                   'Sign out',
                   style: TextStyle(
